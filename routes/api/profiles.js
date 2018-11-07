@@ -13,7 +13,7 @@ router.get('/test', (req, res) => {
 });
 
 // @route  GET api/profiles/homepage
-// @desc   返回的请求的json数据
+// @desc   返回的首页请求的json数据
 // @access public
 router.get('/homepage', (req, res) => {
   res.json({
@@ -110,7 +110,7 @@ router.get('/homepage', (req, res) => {
 });
 
 // @route  GET api/profiles/productionDetail
-// @desc   返回的请求的json数据
+// @desc   返回的商品详情的json数据
 // @access public
 router.get('/productionDetail', (req, res) => {
   res.json({
@@ -123,34 +123,40 @@ router.get('/productionDetail', (req, res) => {
       title:
         '荣耀8X Max 7.12英寸90%屏占比珍珠屏 4GB+64GB 魅海蓝 移动联通电信4G全面屏手机 双卡双待',
       price: '1499.00',
-      baitiao: [
-        {
-          dec: '不分期',
-          tip: '先用后付，0服务费'
-        },
-        {
-          dec: '3期 x 506.83元起',
-          tip: '含手续费，每期7.49元起，费率0.5%起'
-        },
-        {
-          dec: '6期 x 257.14元起',
-          tip: '含手续费，每期7.49元起，费率0.5%起'
-        },
-        {
-          dec: '12期 x 132.36元起',
-          tip: '含手续费，每期7.49元起，费率0.5%起'
-        },
-        {
-          dec: '24期 x 69.83元起',
-          tip: '含手续费，每期7.49元起，费率0.5%起'
-        }
-      ]
-    }
+      count: 1
+    },
+    baitiao: [
+      {
+        desc: '不分期',
+        tip: '先用后付，0服务费',
+        select: true
+      },
+      {
+        desc: '3期 x 506.83元起',
+        tip: '含手续费，每期7.49元起，费率0.5%起',
+        select: false
+      },
+      {
+        desc: '6期 x 257.14元起',
+        tip: '含手续费，每期7.49元起，费率0.5%起',
+        select: false
+      },
+      {
+        desc: '12期 x 132.36元起',
+        tip: '含手续费，每期7.49元起，费率0.5%起',
+        select: false
+      },
+      {
+        desc: '24期 x 69.83元起',
+        tip: '含手续费，每期7.49元起，费率0.5%起',
+        select: false
+      }
+    ]
   });
 });
 
 // @route  GET api/profiles/productions
-// @desc   返回的请求的json数据
+// @desc   返回的商品的json数据
 // @access public
 router.get('/productions', (req, res) => {
   res.json({
@@ -288,7 +294,7 @@ router.get('/productions', (req, res) => {
 });
 
 // @route  GET api/profiles/productionsList
-// @desc   返回的请求的json数据
+// @desc   返回的商品列表的json数据
 // @access public
 router.get('/productionsList', (req, res) => {
   let prolist = [
