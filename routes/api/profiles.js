@@ -113,46 +113,132 @@ router.get('/homepage', (req, res) => {
 // @desc   返回的商品详情的json数据
 // @access public
 router.get('/productionDetail', (req, res) => {
-  res.json({
-    partData: {
-      loopImgUrl: [
-        '/image/classify/phone.png',
-        '/image/classify/miphone.png',
-        '/image/classify/huawei.png'
-      ],
-      title:
-        '荣耀8X Max 7.12英寸90%屏占比珍珠屏 4GB+64GB 魅海蓝 移动联通电信4G全面屏手机 双卡双待',
-      price: '1499.00',
-      count: 1
+  const details = [
+    {
+      partData: {
+        id: '3a4c8b8e4d8c22a97a94b46f58c1f3b9',
+        loopImgUrl: [
+          '/image/classify/phone.png',
+          '/image/classify/miphone.png',
+          '/image/classify/huawei.png'
+        ],
+        title:
+          '荣耀8X Max 7.12英寸90%屏占比珍珠屏 4GB+64GB 魅海蓝 移动联通电信4G全面屏手机 双卡双待',
+        price: '1499.00',
+        count: 1
+      },
+      baitiao: [
+        {
+          desc: '不分期',
+          tip: '先用后付，0服务费',
+          select: true
+        },
+        {
+          desc: '3期 x 506.83元起',
+          tip: '含手续费，每期7.49元起，费率0.5%起',
+          select: false
+        },
+        {
+          desc: '6期 x 257.14元起',
+          tip: '含手续费，每期7.49元起，费率0.5%起',
+          select: false
+        },
+        {
+          desc: '12期 x 132.36元起',
+          tip: '含手续费，每期7.49元起，费率0.5%起',
+          select: false
+        },
+        {
+          desc: '24期 x 69.83元起',
+          tip: '含手续费，每期7.49元起，费率0.5%起',
+          select: false
+        }
+      ]
     },
-    baitiao: [
-      {
-        desc: '不分期',
-        tip: '先用后付，0服务费',
-        select: true
+    {
+      partData: {
+        id: '4a4c8b8e4d8c22a97a94b46f58c1f3b9',
+        loopImgUrl: [
+          '/image/classify/miphone.png',
+          '/image/classify/phone.png',
+          '/image/classify/huawei.png'
+        ],
+        title:
+          '黑莓（BlackBerry）KEY2标准版 6GB+64GB双卡双待 4G全网通手机 黑色 移动联通电信手机',
+        price: '3388.00',
+        count: 1
       },
-      {
-        desc: '3期 x 506.83元起',
-        tip: '含手续费，每期7.49元起，费率0.5%起',
-        select: false
+      baitiao: [
+        {
+          desc: '不分期',
+          tip: '先用后付，0服务费',
+          select: true
+        },
+        {
+          desc: '3期 x 1146.28元起',
+          tip: '含手续费，每期16.94元起，费率0.5%起',
+          select: false
+        },
+        {
+          desc: '6期 x 581.59元起',
+          tip: '含手续费，每期16.94元起，费率0.5%起',
+          select: false
+        },
+        {
+          desc: '12期 x 299.31元起',
+          tip: '含手续费，每期16.94元起，费率0.5%起',
+          select: false
+        },
+        {
+          desc: '24期 x 158.03元起',
+          tip: '含手续费，每期16.94元起，费率0.5%起',
+          select: false
+        }
+      ]
+    },
+    {
+      partData: {
+        id: '5a4c8b8e4d8c22a97a94b46f58c1f3b9',
+        loopImgUrl: [
+          '/image/classify/huawei.png',
+          '/image/classify/miphone.png',
+          '/image/classify/phone.png'
+        ],
+        title:
+          'HUAWEI P20 Pro 全面屏徕卡三摄游戏手机 6GB+128GB 亮黑色 全网通移动联通电信4G手机 双卡双待',
+        price: '4499.00',
+        count: 1
       },
-      {
-        desc: '6期 x 257.14元起',
-        tip: '含手续费，每期7.49元起，费率0.5%起',
-        select: false
-      },
-      {
-        desc: '12期 x 132.36元起',
-        tip: '含手续费，每期7.49元起，费率0.5%起',
-        select: false
-      },
-      {
-        desc: '24期 x 69.83元起',
-        tip: '含手续费，每期7.49元起，费率0.5%起',
-        select: false
-      }
-    ]
-  });
+      baitiao: [
+        {
+          desc: '不分期',
+          tip: '先用后付，0服务费',
+          select: true
+        },
+        {
+          desc: '3期 x 1522.16元起',
+          tip: '含手续费，每期22.50元起，费率0.5%起',
+          select: false
+        },
+        {
+          desc: '6期 x 772.35元起',
+          tip: '含手续费，每期22.50元起，费率0.5%起',
+          select: false
+        },
+        {
+          desc: '12期 x 397.38元起',
+          tip: '含手续费，每期22.50元起，费率0.5%起',
+          select: false
+        },
+        {
+          desc: '24期 x 209.92元起',
+          tip: '含手续费，每期22.50元起，费率0.5%起',
+          select: false
+        }
+      ]
+    }
+  ];
+  res.json(details);
 });
 
 // @route  GET api/profiles/productions
@@ -299,164 +385,139 @@ router.get('/productions', (req, res) => {
 router.get('/productionsList', (req, res) => {
   let prolist = [
     {
+      id: '4a4c8b8e4d8c22a97a94b46f58c1f3b9',
       cover: '/image/classify/miphone.png',
       title:
         '黑莓（BlackBerry）KEY2标准版 6GB+64GB双卡双待 4G全网通手机 黑色 移动联通电信手机',
-      price: '3999.00',
+      price: '3388.00',
       comment: '6239',
       rate: '99%'
     },
     {
+      id: '5a4c8b8e4d8c22a97a94b46f58c1f3b9',
       cover: '/image/classify/huawei.png',
       title:
-        ' HUAWEI P20 Pro 全面屏徕卡三摄游戏手机 6GB+128GB 亮黑色 全网通移动联通电信4G手机 双卡双待',
-      price: '4988.00',
+        'HUAWEI P20 Pro 全面屏徕卡三摄游戏手机 6GB+128GB 亮黑色 全网通移动联通电信4G手机 双卡双待',
+      price: '4499.00',
       comment: '27万',
       rate: '99%'
     },
     {
+      cover: '/image/classify/phone.png',
+      title:
+        '荣耀8X Max 7.12英寸90%屏占比珍珠屏 4GB+64GB 魅海蓝 移动联通电信4G全面屏手机 双卡双待',
+      price: '1499.00',
+      comment: '3万',
+      rate: '99%',
+      id: '3a4c8b8e4d8c22a97a94b46f58c1f3b9'
+    },
+    {
+      id: '4a4c8b8e4d8c22a97a94b46f58c1f3b9',
       cover: '/image/classify/miphone.png',
       title:
         '黑莓（BlackBerry）KEY2标准版 6GB+64GB双卡双待 4G全网通手机 黑色 移动联通电信手机',
-      price: '3999.00',
+      price: '3388.00',
       comment: '6239',
       rate: '99%'
     },
     {
+      id: '5a4c8b8e4d8c22a97a94b46f58c1f3b9',
       cover: '/image/classify/huawei.png',
       title:
-        ' HUAWEI P20 Pro 全面屏徕卡三摄游戏手机 6GB+128GB 亮黑色 全网通移动联通电信4G手机 双卡双待',
-      price: '4988.00',
+        'HUAWEI P20 Pro 全面屏徕卡三摄游戏手机 6GB+128GB 亮黑色 全网通移动联通电信4G手机 双卡双待',
+      price: '4499.00',
       comment: '27万',
       rate: '99%'
     },
     {
+      cover: '/image/classify/phone.png',
+      title:
+        '荣耀8X Max 7.12英寸90%屏占比珍珠屏 4GB+64GB 魅海蓝 移动联通电信4G全面屏手机 双卡双待',
+      price: '1499.00',
+      comment: '3万',
+      rate: '99%',
+      id: '3a4c8b8e4d8c22a97a94b46f58c1f3b9'
+    },
+    {
+      id: '4a4c8b8e4d8c22a97a94b46f58c1f3b9',
       cover: '/image/classify/miphone.png',
       title:
         '黑莓（BlackBerry）KEY2标准版 6GB+64GB双卡双待 4G全网通手机 黑色 移动联通电信手机',
-      price: '3999.00',
+      price: '3388.00',
       comment: '6239',
       rate: '99%'
     },
     {
+      id: '5a4c8b8e4d8c22a97a94b46f58c1f3b9',
       cover: '/image/classify/huawei.png',
       title:
-        ' HUAWEI P20 Pro 全面屏徕卡三摄游戏手机 6GB+128GB 亮黑色 全网通移动联通电信4G手机 双卡双待',
-      price: '4988.00',
+        'HUAWEI P20 Pro 全面屏徕卡三摄游戏手机 6GB+128GB 亮黑色 全网通移动联通电信4G手机 双卡双待',
+      price: '4499.00',
       comment: '27万',
       rate: '99%'
     },
     {
+      cover: '/image/classify/phone.png',
+      title:
+        '荣耀8X Max 7.12英寸90%屏占比珍珠屏 4GB+64GB 魅海蓝 移动联通电信4G全面屏手机 双卡双待',
+      price: '1499.00',
+      comment: '3万',
+      rate: '99%',
+      id: '3a4c8b8e4d8c22a97a94b46f58c1f3b9'
+    },
+    {
+      id: '4a4c8b8e4d8c22a97a94b46f58c1f3b9',
       cover: '/image/classify/miphone.png',
       title:
         '黑莓（BlackBerry）KEY2标准版 6GB+64GB双卡双待 4G全网通手机 黑色 移动联通电信手机',
-      price: '3999.00',
+      price: '3388.00',
       comment: '6239',
       rate: '99%'
     },
     {
+      id: '5a4c8b8e4d8c22a97a94b46f58c1f3b9',
       cover: '/image/classify/huawei.png',
       title:
-        ' HUAWEI P20 Pro 全面屏徕卡三摄游戏手机 6GB+128GB 亮黑色 全网通移动联通电信4G手机 双卡双待',
-      price: '4988.00',
+        'HUAWEI P20 Pro 全面屏徕卡三摄游戏手机 6GB+128GB 亮黑色 全网通移动联通电信4G手机 双卡双待',
+      price: '4499.00',
       comment: '27万',
       rate: '99%'
     },
     {
+      cover: '/image/classify/phone.png',
+      title:
+        '荣耀8X Max 7.12英寸90%屏占比珍珠屏 4GB+64GB 魅海蓝 移动联通电信4G全面屏手机 双卡双待',
+      price: '1499.00',
+      comment: '3万',
+      rate: '99%',
+      id: '3a4c8b8e4d8c22a97a94b46f58c1f3b9'
+    },
+    {
+      id: '4a4c8b8e4d8c22a97a94b46f58c1f3b9',
       cover: '/image/classify/miphone.png',
       title:
         '黑莓（BlackBerry）KEY2标准版 6GB+64GB双卡双待 4G全网通手机 黑色 移动联通电信手机',
-      price: '3999.00',
+      price: '3388.00',
       comment: '6239',
       rate: '99%'
     },
     {
+      id: '5a4c8b8e4d8c22a97a94b46f58c1f3b9',
       cover: '/image/classify/huawei.png',
       title:
-        ' HUAWEI P20 Pro 全面屏徕卡三摄游戏手机 6GB+128GB 亮黑色 全网通移动联通电信4G手机 双卡双待',
-      price: '4988.00',
+        'HUAWEI P20 Pro 全面屏徕卡三摄游戏手机 6GB+128GB 亮黑色 全网通移动联通电信4G手机 双卡双待',
+      price: '4499.00',
       comment: '27万',
       rate: '99%'
     },
     {
-      cover: '/image/classify/miphone.png',
+      cover: '/image/classify/phone.png',
       title:
-        '黑莓（BlackBerry）KEY2标准版 6GB+64GB双卡双待 4G全网通手机 黑色 移动联通电信手机',
-      price: '3999.00',
-      comment: '6239',
-      rate: '99%'
-    },
-    {
-      cover: '/image/classify/huawei.png',
-      title:
-        ' HUAWEI P20 Pro 全面屏徕卡三摄游戏手机 6GB+128GB 亮黑色 全网通移动联通电信4G手机 双卡双待',
-      price: '4988.00',
-      comment: '27万',
-      rate: '99%'
-    },
-    {
-      cover: '/image/classify/miphone.png',
-      title:
-        '黑莓（BlackBerry）KEY2标准版 6GB+64GB双卡双待 4G全网通手机 黑色 移动联通电信手机',
-      price: '3999.00',
-      comment: '6239',
-      rate: '99%'
-    },
-    {
-      cover: '/image/classify/huawei.png',
-      title:
-        ' HUAWEI P20 Pro 全面屏徕卡三摄游戏手机 6GB+128GB 亮黑色 全网通移动联通电信4G手机 双卡双待',
-      price: '4988.00',
-      comment: '27万',
-      rate: '99%'
-    },
-    {
-      cover: '/image/classify/miphone.png',
-      title:
-        '黑莓（BlackBerry）KEY2标准版 6GB+64GB双卡双待 4G全网通手机 黑色 移动联通电信手机',
-      price: '3999.00',
-      comment: '6239',
-      rate: '99%'
-    },
-    {
-      cover: '/image/classify/huawei.png',
-      title:
-        ' HUAWEI P20 Pro 全面屏徕卡三摄游戏手机 6GB+128GB 亮黑色 全网通移动联通电信4G手机 双卡双待',
-      price: '4988.00',
-      comment: '27万',
-      rate: '99%'
-    },
-    {
-      cover: '/image/classify/miphone.png',
-      title:
-        '黑莓（BlackBerry）KEY2标准版 6GB+64GB双卡双待 4G全网通手机 黑色 移动联通电信手机',
-      price: '3999.00',
-      comment: '6239',
-      rate: '99%'
-    },
-    {
-      cover: '/image/classify/huawei.png',
-      title:
-        ' HUAWEI P20 Pro 全面屏徕卡三摄游戏手机 6GB+128GB 亮黑色 全网通移动联通电信4G手机 双卡双待',
-      price: '4988.00',
-      comment: '27万',
-      rate: '99%'
-    },
-    {
-      cover: '/image/classify/miphone.png',
-      title:
-        '黑莓（BlackBerry）KEY2标准版 6GB+64GB双卡双待 4G全网通手机 黑色 移动联通电信手机',
-      price: '3999.00',
-      comment: '6239',
-      rate: '99%'
-    },
-    {
-      cover: '/image/classify/huawei.png',
-      title:
-        ' HUAWEI P20 Pro 全面屏徕卡三摄游戏手机 6GB+128GB 亮黑色 全网通移动联通电信4G手机 双卡双待',
-      price: '4988.00',
-      comment: '27万',
-      rate: '99%'
+        '荣耀8X Max 7.12英寸90%屏占比珍珠屏 4GB+64GB 魅海蓝 移动联通电信4G全面屏手机 双卡双待',
+      price: '1499.00',
+      comment: '3万',
+      rate: '99%',
+      id: '3a4c8b8e4d8c22a97a94b46f58c1f3b9'
     }
   ];
 
@@ -477,124 +538,139 @@ router.get('/productionsList', (req, res) => {
 router.get('/productionsList/:page/:size', (req, res) => {
   let prolist = [
     {
-      cover: '/image/classify/huawei.png',
-      title:
-        '1 HUAWEI P20 Pro 全面屏徕卡三摄游戏手机 6GB+128GB 亮黑色 全网通移动联通电信4G手机 双卡双待',
-      price: '4988.00',
-      comment: '27万',
-      rate: '99%'
-    },
-    {
+      id: '4a4c8b8e4d8c22a97a94b46f58c1f3b9',
       cover: '/image/classify/miphone.png',
       title:
-        '2黑莓（BlackBerry）KEY2标准版 6GB+64GB双卡双待 4G全网通手机 黑色 移动联通电信手机',
-      price: '3999.00',
+        '黑莓（BlackBerry）KEY2标准版 6GB+64GB双卡双待 4G全网通手机 黑色 移动联通电信手机',
+      price: '3388.00',
       comment: '6239',
       rate: '99%'
     },
     {
+      id: '5a4c8b8e4d8c22a97a94b46f58c1f3b9',
       cover: '/image/classify/huawei.png',
       title:
-        '3 HUAWEI P20 Pro 全面屏徕卡三摄游戏手机 6GB+128GB 亮黑色 全网通移动联通电信4G手机 双卡双待',
-      price: '4988.00',
+        'HUAWEI P20 Pro 全面屏徕卡三摄游戏手机 6GB+128GB 亮黑色 全网通移动联通电信4G手机 双卡双待',
+      price: '4499.00',
       comment: '27万',
       rate: '99%'
     },
     {
+      cover: '/image/classify/phone.png',
+      title:
+        '荣耀8X Max 7.12英寸90%屏占比珍珠屏 4GB+64GB 魅海蓝 移动联通电信4G全面屏手机 双卡双待',
+      price: '1499.00',
+      comment: '3万',
+      rate: '99%',
+      id: '3a4c8b8e4d8c22a97a94b46f58c1f3b9'
+    },
+    {
+      id: '4a4c8b8e4d8c22a97a94b46f58c1f3b9',
       cover: '/image/classify/miphone.png',
       title:
-        '4黑莓（BlackBerry）KEY2标准版 6GB+64GB双卡双待 4G全网通手机 黑色 移动联通电信手机',
-      price: '3999.00',
+        '黑莓（BlackBerry）KEY2标准版 6GB+64GB双卡双待 4G全网通手机 黑色 移动联通电信手机',
+      price: '3388.00',
       comment: '6239',
       rate: '99%'
     },
     {
+      id: '5a4c8b8e4d8c22a97a94b46f58c1f3b9',
       cover: '/image/classify/huawei.png',
       title:
-        ' 5HUAWEI P20 Pro 全面屏徕卡三摄游戏手机 6GB+128GB 亮黑色 全网通移动联通电信4G手机 双卡双待',
-      price: '4988.00',
+        'HUAWEI P20 Pro 全面屏徕卡三摄游戏手机 6GB+128GB 亮黑色 全网通移动联通电信4G手机 双卡双待',
+      price: '4499.00',
       comment: '27万',
       rate: '99%'
     },
     {
+      cover: '/image/classify/phone.png',
+      title:
+        '荣耀8X Max 7.12英寸90%屏占比珍珠屏 4GB+64GB 魅海蓝 移动联通电信4G全面屏手机 双卡双待',
+      price: '1499.00',
+      comment: '3万',
+      rate: '99%',
+      id: '3a4c8b8e4d8c22a97a94b46f58c1f3b9'
+    },
+    {
+      id: '4a4c8b8e4d8c22a97a94b46f58c1f3b9',
       cover: '/image/classify/miphone.png',
       title:
-        '6黑莓（BlackBerry）KEY2标准版 6GB+64GB双卡双待 4G全网通手机 黑色 移动联通电信手机',
-      price: '3999.00',
+        '黑莓（BlackBerry）KEY2标准版 6GB+64GB双卡双待 4G全网通手机 黑色 移动联通电信手机',
+      price: '3388.00',
       comment: '6239',
       rate: '99%'
     },
     {
+      id: '5a4c8b8e4d8c22a97a94b46f58c1f3b9',
       cover: '/image/classify/huawei.png',
       title:
-        '7 HUAWEI P20 Pro 全面屏徕卡三摄游戏手机 6GB+128GB 亮黑色 全网通移动联通电信4G手机 双卡双待',
-      price: '4988.00',
+        'HUAWEI P20 Pro 全面屏徕卡三摄游戏手机 6GB+128GB 亮黑色 全网通移动联通电信4G手机 双卡双待',
+      price: '4499.00',
       comment: '27万',
       rate: '99%'
     },
     {
+      cover: '/image/classify/phone.png',
+      title:
+        '荣耀8X Max 7.12英寸90%屏占比珍珠屏 4GB+64GB 魅海蓝 移动联通电信4G全面屏手机 双卡双待',
+      price: '1499.00',
+      comment: '3万',
+      rate: '99%',
+      id: '3a4c8b8e4d8c22a97a94b46f58c1f3b9'
+    },
+    {
+      id: '4a4c8b8e4d8c22a97a94b46f58c1f3b9',
       cover: '/image/classify/miphone.png',
       title:
-        '8黑莓（BlackBerry）KEY2标准版 6GB+64GB双卡双待 4G全网通手机 黑色 移动联通电信手机',
-      price: '3999.00',
+        '黑莓（BlackBerry）KEY2标准版 6GB+64GB双卡双待 4G全网通手机 黑色 移动联通电信手机',
+      price: '3388.00',
       comment: '6239',
       rate: '99%'
     },
     {
+      id: '5a4c8b8e4d8c22a97a94b46f58c1f3b9',
       cover: '/image/classify/huawei.png',
       title:
-        '9 HUAWEI P20 Pro 全面屏徕卡三摄游戏手机 6GB+128GB 亮黑色 全网通移动联通电信4G手机 双卡双待',
-      price: '4988.00',
+        'HUAWEI P20 Pro 全面屏徕卡三摄游戏手机 6GB+128GB 亮黑色 全网通移动联通电信4G手机 双卡双待',
+      price: '4499.00',
       comment: '27万',
       rate: '99%'
     },
     {
+      cover: '/image/classify/phone.png',
+      title:
+        '荣耀8X Max 7.12英寸90%屏占比珍珠屏 4GB+64GB 魅海蓝 移动联通电信4G全面屏手机 双卡双待',
+      price: '1499.00',
+      comment: '3万',
+      rate: '99%',
+      id: '3a4c8b8e4d8c22a97a94b46f58c1f3b9'
+    },
+    {
+      id: '4a4c8b8e4d8c22a97a94b46f58c1f3b9',
       cover: '/image/classify/miphone.png',
       title:
-        '10黑莓（BlackBerry）KEY2标准版 6GB+64GB双卡双待 4G全网通手机 黑色 移动联通电信手机',
-      price: '3999.00',
+        '黑莓（BlackBerry）KEY2标准版 6GB+64GB双卡双待 4G全网通手机 黑色 移动联通电信手机',
+      price: '3388.00',
       comment: '6239',
       rate: '99%'
     },
     {
+      id: '5a4c8b8e4d8c22a97a94b46f58c1f3b9',
       cover: '/image/classify/huawei.png',
       title:
-        '11 HUAWEI P20 Pro 全面屏徕卡三摄游戏手机 6GB+128GB 亮黑色 全网通移动联通电信4G手机 双卡双待',
-      price: '4988.00',
+        'HUAWEI P20 Pro 全面屏徕卡三摄游戏手机 6GB+128GB 亮黑色 全网通移动联通电信4G手机 双卡双待',
+      price: '4499.00',
       comment: '27万',
       rate: '99%'
     },
     {
-      cover: '/image/classify/miphone.png',
+      cover: '/image/classify/phone.png',
       title:
-        '12黑莓（BlackBerry）KEY2标准版 6GB+64GB双卡双待 4G全网通手机 黑色 移动联通电信手机',
-      price: '3999.00',
-      comment: '6239',
-      rate: '99%'
-    },
-    {
-      cover: '/image/classify/huawei.png',
-      title:
-        '13 HUAWEI P20 Pro 全面屏徕卡三摄游戏手机 6GB+128GB 亮黑色 全网通移动联通电信4G手机 双卡双待',
-      price: '4988.00',
-      comment: '27万',
-      rate: '99%'
-    },
-    {
-      cover: '/image/classify/miphone.png',
-      title:
-        '14黑莓（BlackBerry）KEY2标准版 6GB+64GB双卡双待 4G全网通手机 黑色 移动联通电信手机',
-      price: '3999.00',
-      comment: '6239',
-      rate: '99%'
-    },
-    {
-      cover: '/image/classify/huawei.png',
-      title:
-        ' 15HUAWEI P20 Pro 全面屏徕卡三摄游戏手机 6GB+128GB 亮黑色 全网通移动联通电信4G手机 双卡双待',
-      price: '4988.00',
-      comment: '27万',
-      rate: '99%'
+        '荣耀8X Max 7.12英寸90%屏占比珍珠屏 4GB+64GB 魅海蓝 移动联通电信4G全面屏手机 双卡双待',
+      price: '1499.00',
+      comment: '3万',
+      rate: '99%',
+      id: '3a4c8b8e4d8c22a97a94b46f58c1f3b9'
     }
   ];
   let size = req.params.size;
